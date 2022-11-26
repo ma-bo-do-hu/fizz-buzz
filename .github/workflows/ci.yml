@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "{name}={value}" >> $GITHUB_OUTPUT
       - name: Cache NPM
-        uses: actions/cache@v1.1.0
+        uses: actions/cache@v2
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
